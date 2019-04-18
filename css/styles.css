@@ -1,0 +1,126 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background-color: #070c24;
+	font-family: 'Poppins', sans-serif;
+}
+.container {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 900px;
+	height: 600px;
+	background-color: #fff;
+	margin: 20px;
+}
+.imgBox {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+	height: 100%;
+	background-color: #006dbc;
+
+}
+.imgBox:before {
+	content: 'Nike';
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	color: #000;
+	opacity: .1;
+	font-size: 8em;
+	font-weight: 800;
+}
+.imgBox img {
+	position: relative;
+	width: 700px;
+	transform: scale(1.2) rotate(-30deg);
+	left: -30px;
+	transition: .5s;
+}
+.details {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+	height: 100%;
+	padding: 40px;
+}
+.content-title {
+	font-size: 2.5em;
+	line-height: .8em;
+	color: #444;
+}
+.content-title span {
+	font-size: .4em;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: #999;
+}
+.content-text {
+	max-width: 85%;
+	margin-left: 15%;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	color: #333;
+	font-size: 15px;
+}
+.content-buy {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.content-price {
+	font-size: 2.5em;
+	color: #a2a2a2;
+}
+.content-btn {
+	border: none;
+	outline: none;
+	background-color: #006dbc;
+	color: #fff;
+	padding: 15px 20px;
+	margin-top: 5px;
+	font-size: 16px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	font-weight: 600;
+	border-radius: 40px;
+	cursor: pointer;
+}
+@media only screen and (max-width: 1080px){
+	.container {
+		height: auto;
+	}
+	.imgBox {
+		padding: 40px;
+		width: 100%;
+		height: auto;
+		text-align: center;
+		overflow: hidden;
+	}
+	.imgBox img {
+		left: initial;
+		width: 100%;
+		transform: rotate(0);
+	}
+	.details {
+		width: 100%;
+		height: auto;
+		padding: 20px;
+	}
+	.content-text {
+		max-width: 100%;
+		margin-left: 0;
+	}
+}
